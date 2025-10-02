@@ -1,0 +1,32 @@
+{% extends "student/layout.html" %}
+
+{% block body %}
+
+<div id="index-container">
+
+    <div id="add-student-btn">
+       
+    </div>
+    <h3>Inactive Students</h3>
+
+    {% include "student/partials/messages.html" %}
+
+    {% for student in students %}
+
+            <div class="student-index-container">
+                <div class="student-vitals-container">
+                    <div>
+                        <a href="{% url 'student_detail' student.id %}">{{ student.lname }}, {{ student.fname }}</a>
+                    </div>    
+                </div>
+                <div class="student-id">
+                    Student ID: {{student.id}}
+                </div>
+            </div>
+        {% empty  %}
+            <p>No inactive students found.</p>
+
+    {% endfor %}
+</div>
+   
+{% endblock %}

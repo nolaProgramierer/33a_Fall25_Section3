@@ -1,0 +1,17 @@
+{% extends "student/layout.html" %}
+
+{% block body %}
+
+   <h2>Add a course</h2>
+   
+   <form action="{% url 'new_course' %}"} method="POST" class="flex-form">
+       {% csrf_token %}
+         {{ form }}   
+      <input type="submit" value="Add Course">
+      
+   </form>
+   <div>
+      <a href="{% url 'index' %}">Cancel</a>
+   </div>
+   
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends "student/layout.html" %}
+
+{% block body %}
+
+    <h2><em>{{student.fname}} {{student.lname}}</em></h2>
+    <h3>{{ message }}</h3>
+    <a href="{% url 'add_student' %}">Back to Add Student form</a>
+    
+{% endblock %}
