@@ -28,17 +28,17 @@ student1.courses.add(course2)             # student1 also in course2
 # -----------------------------
 # 5) Query a student’s courses
 # -----------------------------
-print("Student1 courses:", student1.courses.all())
+student1.courses.all()
 
 # -----------------------------
 # 6) Query a course’s students
 # -----------------------------
-print("Course1 students:", course1.students.all())
+course1.students.all()
 
 # -----------------------------
 # 7) Query an advisor’s advisees
 # -----------------------------
-print("Advisor1 advisees:", advisor1.advisees.all())
+advisor1.advisees.all()
 
 # -----------------------------
 # 8) Add another course to a student
@@ -49,13 +49,14 @@ student2.courses.add(course3)
 # -----------------------------
 # 9) Query updated student courses
 # -----------------------------
-print("Student2 courses after adding course3:", student2.courses.all())
+student2.courses.all()
 
 # -----------------------------
 # 10) Simple filter: students in course1
 # -----------------------------
 students_in_course1 = Student.objects.filter(courses=course1)
-print("Students enrolled in course1:", students_in_course1)
+students_in_course1
+
 
 
 
